@@ -1,0 +1,101 @@
+{
+    "intents": [
+        {
+            "tag": "greetings",
+            "patterns": [
+                "hello",
+                "hi",
+                "hey",
+                "how is it going",
+                "what's up",
+                "greetings",
+                "good day"
+            ],
+            "responses": [
+                "Hello!",
+                "Hey!",
+                "What can I do for you?"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "cya",
+                "see you soon",
+                "bye",
+                "goodbye",
+                "what's up",
+                "cao",
+                "I am leaving"
+            ],
+            "responses": [
+                "Sad to see you go :(",
+                "Talk to you later",
+                "Goodbye!"
+            ]
+        },
+        {
+            "tag": "name",
+            "patterns": [
+                "what is your name",
+                "what's your name",
+                "what should I call you?",
+                "who are you?"
+            ],
+            "responses": [
+                "You can call me Chad GPT",
+                "I'm Chad GPT",
+                "You can call me Father of Chat GPT"
+            ]
+        },
+        {
+            "tag": "shop",
+            "patterns": [
+                "what do you sell?",
+                "what products do you have?",
+                "what items are available?",
+                "shop items",
+                "shop products",
+                "what can I buy here?"
+            ],
+            "responses": [
+                "We sell a variety of products including electronics, clothing, and home goods.",
+                "Our shop offers electronics, clothing, and home goods.",
+                "You can buy electronics, clothing, and home goods from our shop."
+            ]
+        },
+        {
+            "tag": "hours",
+            "patterns": [
+                "what are your hours?",
+                "when are you open?",
+                "what time do you close?",
+                "opening hours",
+                "closing hours",
+                "store hours",
+                "shop hours"
+            ],
+            "responses": [
+                "We are open from 9 AM to 9 PM from Monday to Saturday.",
+                "Our shop hours are 9 AM to 9 PM, Monday through Saturday.",
+                "We open at 9 AM and close at 9 PM from Monday to Saturday."
+            ]
+        },
+        {
+            "tag": "stocks",
+            "patterns": [
+                "do you have this in stock?",
+                "is this available?",
+                "can I buy this?",
+                "stock availability",
+                "do you carry this?",
+                "is this item in stock?"
+            ],
+            "responses": [
+                "Let me check the stock for you.",
+                "We have this item in stock.",
+                "This item is currently out of stock."
+            ]
+        }
+    ]
+}
