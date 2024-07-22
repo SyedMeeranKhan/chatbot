@@ -1,5 +1,3 @@
----
-
 # Chatbot Project
 
 ## Table of Contents
@@ -196,4 +194,3 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
----
