@@ -3,12 +3,11 @@ import numpy as np
 import pickle
 import json
 
+import tensorflow as tf
+
+#Tokenization and Lemmatization(Tokenizes the patterns into words and lemmatizes them to reduce words to their base form)
 import nltk
 from nltk.stem import WordNetLemmatizer
-# nltk.download('punkt')
-# nltk.download('wordnet')
-
-import tensorflow as tf
 
 lemmatizer = WordNetLemmatizer()
 
@@ -30,9 +29,14 @@ words = [lemmatizer.lemmatize(word) for word in words if word not in ignore_lett
 words = sorted(set(words))
 
 classes = sorted(set(classes))
+
+#Saving Preprocessed Data (Stores the processed words and classes in pickle files.)
 pickle.dump(words, open('words.pkl', 'wb'))
 pickle.dump(classes, open('classes.pkl', 'wb'))
 
+#Model Training
+#1(Preparing Training Data: Creates training data by converting the documents into bag-of-words arrays 
+# and their corresponding intent classes into one-hot encoded arrays)
 training = []
 output_empty = [0] * len(classes)
 
@@ -55,7 +59,7 @@ training = np.array(training, dtype=object)
 train_x = np.array(training[:, 0].tolist())
 train_y = np.array(training[:, 1].tolist())
 
-#buliding neural network
+#2(Building the Neural Network: Defines and trains a neural network using TensorFlow and Keras)
 model = tf.keras.Sequential()
 model.add(tf.keras.layers.Dense(128, input_shape=(len(train_x[0]),), activation = 'relu'))
 model.add(tf.keras.layers.Dropout(0.5))

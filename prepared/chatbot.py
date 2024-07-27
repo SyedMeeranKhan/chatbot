@@ -22,6 +22,7 @@ def clean_up_sentence(sentence):
     sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
     return sentence_words
 
+#Bag of Words(Converts input sentences into a bag-of-words representation to use as input for the model)
 def bag_of_words(sentence):
     sentence_words = clean_up_sentence(sentence)
     bag = [0] * len(words)
@@ -31,6 +32,8 @@ def bag_of_words(sentence):
                 bag[i] = 1
     return np.array(bag)
 
+#Prediction and Response
+#1(Predicting the Intent: Uses the trained model to predict the intent of a user input)
 def predict_class(sentence):
     bow = bag_of_words(sentence)
     # model = tf.keras.load_model()
@@ -45,6 +48,7 @@ def predict_class(sentence):
         return_list.append({'intent': classes[r[0]],'probability': str(r[1])})
     return return_list
 
+#2(Generating the Response: Maps the predicted intent to a response from the intents JSON structure)
 def get_response(intents_list, intents_json):
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
